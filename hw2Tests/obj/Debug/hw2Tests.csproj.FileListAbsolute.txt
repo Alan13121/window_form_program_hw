@@ -1,0 +1,55 @@
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\zh-Hant\Microsoft.TestPlatform.AdapterUtilities.resources.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\hw2Tests.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\hw2Tests.pdb
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\hw2.exe
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\hw2.pdb
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\hw2.exe.config
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\作業中\視窗程式設計\gitlab\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\作業中\視窗程式設計\gitlab\hw2Tests\obj\Debug\hw2Tests.csproj.AssemblyReference.cache
+D:\作業中\視窗程式設計\gitlab\hw2Tests\obj\Debug\hw2Tests.csproj.CoreCompileInputs.cache
+D:\作業中\視窗程式設計\gitlab\hw2Tests\obj\Debug\hw2Tests.csproj.Up2Date
+D:\作業中\視窗程式設計\gitlab\hw2Tests\obj\Debug\hw2Tests.dll
+D:\作業中\視窗程式設計\gitlab\hw2Tests\obj\Debug\hw2Tests.pdb
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\zh-Hant\Microsoft.TestPlatform.AdapterUtilities.resources.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\hw2Tests.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\hw2Tests.pdb
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\Castle.Core.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\hw2.exe
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\Moq.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\hw2.pdb
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\hw2.exe.config
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\Castle.Core.xml
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\作業中\視窗程式設計\other thing\hw2Tests\obj\Debug\hw2Tests.csproj.AssemblyReference.cache
+D:\作業中\視窗程式設計\other thing\hw2Tests\obj\Debug\hw2Tests.csproj.CoreCompileInputs.cache
+D:\作業中\視窗程式設計\other thing\hw2Tests\obj\Debug\hw2Tests.csproj.Up2Date
+D:\作業中\視窗程式設計\other thing\hw2Tests\obj\Debug\hw2Tests.dll
+D:\作業中\視窗程式設計\other thing\hw2Tests\obj\Debug\hw2Tests.pdb
