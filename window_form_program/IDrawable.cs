@@ -14,7 +14,9 @@ namespace hw2
         void DrawOval(float X, float Y, float Width, float Height, string Text, PointF OrangeDot);
         void DrawPolygon(float X, float Y, float Width, float Height, string Text, PointF OrangeDot);
         void DrawBoundingBox(float X, float Y, float Width, float Height, string Text, PointF OrangeDot);
-        void DrawText(float X, float Y, float Width, float Height, string Text, PointF OrangeDot);
+         void DrawText(float X, float Y, float Width, float Height, string Text, PointF OrangeDot);
+        void DrawLine(float X, float Y, float Width, float Height);
+        void DrawGrayDot(float X, float Y, float Width, float Height);
     }
 }
 

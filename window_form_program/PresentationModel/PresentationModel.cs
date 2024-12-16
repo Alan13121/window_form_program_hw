@@ -35,6 +35,11 @@ namespace hw2.PresentationModel
             //this.canvas = canvas;
 
         }
+        public bool IsChangeText(PointF point)
+        {
+            return model.IsChangeText(point);
+            
+        }
         public void ShapeComboBoxIndexChanged(int index)
         {
             if (index != -1)

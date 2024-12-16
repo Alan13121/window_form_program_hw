@@ -96,3 +96,22 @@ D:\作業中\視窗程式設計\other thing\window_form_program\obj\Debug\hw2.cs
 D:\作業中\視窗程式設計\other thing\window_form_program\obj\Debug\hw2.csproj.Up2Date
 D:\作業中\視窗程式設計\other thing\window_form_program\obj\Debug\hw2.exe
 D:\作業中\視窗程式設計\other thing\window_form_program\obj\Debug\hw2.pdb
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\bin\Debug\hw2.exe.config
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\bin\Debug\hw2.exe
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\bin\Debug\hw2.pdb
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\bin\Debug\Castle.Core.dll
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\bin\Debug\Moq.dll
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\bin\Debug\Castle.Core.xml
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\obj\Debug\hw2.csproj.AssemblyReference.cache
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\obj\Debug\hw2.MyDrawing_Form.resources
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\obj\Debug\hw2.Properties.Resources.resources
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\obj\Debug\hw2.csproj.GenerateResource.cache
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\obj\Debug\hw2.csproj.CoreCompileInputs.cache
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\obj\Debug\hw2.csproj.Up2Date
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\obj\Debug\hw2.exe
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\obj\Debug\hw2.pdb
+C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\obj\Debug\hw2.ChangeTextForm.resources

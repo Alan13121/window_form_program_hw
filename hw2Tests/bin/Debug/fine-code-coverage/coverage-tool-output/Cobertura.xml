@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.342934293429343" branch-rate="0.336734693877551" lines-covered="381" lines-valid="1111" branches-covered="33" branches-valid="98" complexity="181" version="0" timestamp="1733346958">
+<coverage line-rate="0.342934293429343" branch-rate="0.336734693877551" lines-covered="381" lines-valid="1111" branches-covered="33" branches-valid="98" complexity="181" version="0" timestamp="1734345918">
   <sources />
   <packages>
     <package name="hw2" line-rate="0.258883248730964" branch-rate="0.336734693877551" complexity="161">
       <classes>
-        <class name="hw2.Decision" filename="D:\作業中\視窗程式設計\other thing\window_form_program\Shapes.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="hw2.Decision" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Shapes.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -53,7 +53,7 @@
             <line number="192" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="hw2.DoubleBufferedPanel" filename="D:\作業中\視窗程式設計\other thing\window_form_program\DoubleBufferedPanel.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="hw2.DoubleBufferedPanel" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\DoubleBufferedPanel.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -71,7 +71,7 @@
             <line number="17" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="hw2.DrawingState" filename="D:\作業中\視窗程式設計\other thing\window_form_program\DrawingState.cs" line-rate="0.238095238095238" branch-rate="0.0714285714285714" complexity="1">
+        <class name="hw2.DrawingState" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\DrawingState.cs" line-rate="0.238095238095238" branch-rate="0.0714285714285714" complexity="1">
           <methods>
             <method name="Initialize" signature="(hw2.Model)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -243,7 +243,7 @@
             <line number="100" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="hw2.GeneralState" filename="D:\作業中\視窗程式設計\other thing\window_form_program\GeneralState.cs" line-rate="0.256410256410256" branch-rate="0.227272727272727" complexity="1">
+        <class name="hw2.GeneralState" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\GeneralState.cs" line-rate="0.256410256410256" branch-rate="0.227272727272727" complexity="1">
           <methods>
             <method name="Initialize" signature="(hw2.Model)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -449,7 +449,7 @@
             <line number="115" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="hw2.Model" filename="D:\作業中\視窗程式設計\other thing\window_form_program\Model.cs" line-rate="1" branch-rate="1" complexity="5">
+        <class name="hw2.Model" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Model.cs" line-rate="1" branch-rate="1" complexity="5">
           <methods>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -601,7 +601,7 @@
             <line number="88" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="hw2.MyDrawing_Form" filename="D:\作業中\視窗程式設計\other thing\window_form_program\Form1.cs" line-rate="0" branch-rate="0" complexity="1">
+        <class name="hw2.MyDrawing_Form" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Form1.cs" line-rate="0" branch-rate="0" complexity="1">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -945,7 +945,7 @@
             <line number="189" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="hw2.MyDrawing_Form" filename="D:\作業中\視窗程式設計\other thing\window_form_program\Form1.Designer.cs" line-rate="0" branch-rate="0" complexity="1">
+        <class name="hw2.MyDrawing_Form" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Form1.Designer.cs" line-rate="0" branch-rate="0" complexity="1">
           <methods>
             <method name="Dispose" signature="(System.Boolean)" line-rate="0" branch-rate="0" complexity="NaN">
               <lines>
@@ -1640,7 +1640,7 @@
             <line number="468" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="hw2.PresentationModel.PresentationModel" filename="D:\作業中\視窗程式設計\other thing\window_form_program\PresentationModel\PresentationModel.cs" line-rate="1" branch-rate="0.75" complexity="7">
+        <class name="hw2.PresentationModel.PresentationModel" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\PresentationModel\PresentationModel.cs" line-rate="1" branch-rate="0.75" complexity="7">
           <methods>
             <method name="IsAddButtonEnabled" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -1944,7 +1944,7 @@
             <line number="182" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="hw2.PresentationModel.WindowsFormsGraphicsAdaptor" filename="D:\作業中\視窗程式設計\other thing\window_form_program\PresentationModel\WindowsFormsGraphicsAdaptor.cs" line-rate="0" branch-rate="0" complexity="NaN">
+        <class name="hw2.PresentationModel.WindowsFormsGraphicsAdaptor" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\PresentationModel\WindowsFormsGraphicsAdaptor.cs" line-rate="0" branch-rate="0" complexity="NaN">
           <methods>
             <method name=".ctor" signature="(System.Drawing.Graphics)" line-rate="0" branch-rate="1" complexity="NaN">
               <lines>
@@ -2078,7 +2078,7 @@
             <line number="81" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="hw2.Process" filename="D:\作業中\視窗程式設計\other thing\window_form_program\Shapes.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="hw2.Process" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Shapes.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2120,7 +2120,7 @@
             <line number="170" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="hw2.Program" filename="D:\作業中\視窗程式設計\other thing\window_form_program\Program.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="hw2.Program" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name="Main" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2140,7 +2140,7 @@
             <line number="20" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="hw2.RandomStringBuilder" filename="D:\作業中\視窗程式設計\other thing\window_form_program\RandomStringBuilder.cs" line-rate="0" branch-rate="0" complexity="3">
+        <class name="hw2.RandomStringBuilder" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\RandomStringBuilder.cs" line-rate="0" branch-rate="0" complexity="3">
           <methods>
             <method name="GenerateRandomString" signature="()" line-rate="0" branch-rate="0" complexity="2">
               <lines>
@@ -2176,7 +2176,7 @@
             <line number="26" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="hw2.Shape" filename="D:\作業中\視窗程式設計\other thing\window_form_program\Shapes.cs" line-rate="0.470588235294118" branch-rate="1" complexity="4">
+        <class name="hw2.Shape" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Shapes.cs" line-rate="0.470588235294118" branch-rate="1" complexity="4">
           <methods>
             <method name="ShapeName" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -2342,7 +2342,7 @@
             <line number="92" hits="4" branch="false" />
           </lines>
         </class>
-        <class name="hw2.ShapeFactory" filename="D:\作業中\視窗程式設計\other thing\window_form_program\factory.cs" line-rate="0.695652173913043" branch-rate="0.125" complexity="NaN">
+        <class name="hw2.ShapeFactory" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\factory.cs" line-rate="0.695652173913043" branch-rate="0.125" complexity="NaN">
           <methods>
             <method name="CreateShape" signature="(System.String,System.Int32,System.String,System.Int32,System.Int32,System.Int32,System.Int32)" line-rate="0.695652173913043" branch-rate="0.125" complexity="NaN">
               <lines>
@@ -2398,7 +2398,7 @@
             <line number="50" hits="4" branch="false" />
           </lines>
         </class>
-        <class name="hw2.Shapes" filename="D:\作業中\視窗程式設計\other thing\window_form_program\Shapes.cs" line-rate="1" branch-rate="1" complexity="2">
+        <class name="hw2.Shapes" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Shapes.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
             <method name="Add_shape" signature="(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)" line-rate="1" branch-rate="1" complexity="NaN">
               <lines>
@@ -2460,7 +2460,7 @@
             <line number="39" hits="6" branch="false" />
           </lines>
         </class>
-        <class name="hw2.Start" filename="D:\作業中\視窗程式設計\other thing\window_form_program\Shapes.cs" line-rate="0.333333333333333" branch-rate="1" complexity="1">
+        <class name="hw2.Start" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Shapes.cs" line-rate="0.333333333333333" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -2502,7 +2502,7 @@
             <line number="114" hits="0" branch="false" />
           </lines>
         </class>
-        <class name="hw2.Terminator" filename="D:\作業中\視窗程式設計\other thing\window_form_program\Shapes.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="hw2.Terminator" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Shapes.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
@@ -2576,7 +2576,7 @@
     </package>
     <package name="hw2Tests" line-rate="1" branch-rate="1" complexity="20">
       <classes>
-        <class name="hw2.PresentationModel.Tests.PresentationModelTests" filename="D:\作業中\視窗程式設計\other thing\hw2Tests\PresentationModel\PresentationModelTests.cs" line-rate="1" branch-rate="1" complexity="12">
+        <class name="hw2.PresentationModel.Tests.PresentationModelTests" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\hw2Tests\PresentationModel\PresentationModelTests.cs" line-rate="1" branch-rate="1" complexity="12">
           <methods>
             <method name="Initialize" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -2750,7 +2750,7 @@
             <line number="120" hits="1" branch="false" />
           </lines>
         </class>
-        <class name="hw2.Tests.ModelTests" filename="D:\作業中\視窗程式設計\other thing\hw2Tests\ModelTests.cs" line-rate="1" branch-rate="1" complexity="8">
+        <class name="hw2.Tests.ModelTests" filename="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\hw2Tests\ModelTests.cs" line-rate="1" branch-rate="1" complexity="8">
           <methods>
             <method name="TestEnterNewShape_StringArray" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>

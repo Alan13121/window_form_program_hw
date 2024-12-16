@@ -79,6 +79,18 @@ namespace hw2.PresentationModel
 
             _graphics.DrawString(Text, font, brush, new PointF(OrangeDot.X, OrangeDot.Y));
         }
+        public void DrawLine(float X, float Y, float Width, float Height)
+        {
+            _graphics.DrawLine(new Pen(Color.Gray, 5), X, Y, X + Width, Y + Height);
+        }
+        public void DrawGrayDot(float X, float Y, float Width, float Height)
+        {
+            _graphics.FillEllipse(Brushes.Gray, X + Width / 2, Y, 10, 10);
+            _graphics.FillEllipse(Brushes.Gray, X + Width / 2, Y + Height, 10, 10);
+            _graphics.FillEllipse(Brushes.Gray, X + Width, Y + Height / 2, 10, 10);
+            _graphics.FillEllipse(Brushes.Gray, X, Y + Height / 2, 10, 10);
+
+        }
     }
 
 }

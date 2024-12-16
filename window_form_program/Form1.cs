@@ -22,13 +22,13 @@ namespace hw2
         {
             InitializeComponent();
             Canva.Location = new Point(180, 49);
-            //Canva.BackColor = Color.Red;
             Canva.Width = 568;
             Canva.Height = 513;
             Canva.MouseDown += Canva_MouseDown;
             Canva.MouseUp += Canva_MouseUp;
             Canva.MouseMove += Canva_MouseMove;
             Canva.Paint += Canva_Paint;
+            Canva.MouseDoubleClick += Canva_DoubleClick;
             _presentationModel = new PresentationModel.PresentationModel(model);
             model._modelChanged += HandleModelChanged;
             Controls.Add(Canva);
@@ -43,6 +43,19 @@ namespace hw2
             GeneralStateBottom.Checked = true;
         }
 
+        private void Canva_DoubleClick(object sender, MouseEventArgs e)
+        {
+            PointF point = new PointF { X = e.X, Y = e.Y };
+            if (_presentationModel.IsChangeText(point))
+            {
+                ChangeTextForm changeTextForm = new ChangeTextForm();
+                changeTextForm.ShowDialog();
+                string text = changeTextForm.GetText();
+                if(changeTextForm.DialogResult==DialogResult.OK)
+                    model.ChangeText(point,text);
+            }
+            
+        }
 
         private void add_shape_buttom_Click(object sender, EventArgs e)
         {
@@ -86,6 +99,8 @@ namespace hw2
 
 
         }
+
+
         private void Canva_MouseDown(object sender, MouseEventArgs e)
         {
             model.PointerPressed(e.X, e.Y);
@@ -190,4 +205,5 @@ namespace hw2
 
 
     }
+
 }

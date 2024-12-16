@@ -20,8 +20,9 @@ namespace hw2
         public delegate void ModelChangedEventHandler();
         int ID = 1;
 
-        IState drawingState;
-        IState generalState;
+        DrawingState drawingState;
+        GeneralState generalState;
+        DrawingLineState drawinglineState;
         IState currentState;
 
         public Model()
@@ -29,6 +30,24 @@ namespace hw2
             generalState = new GeneralState();
             drawingState = new DrawingState();
             ChangeToGeneralState();
+        }
+        public bool IsChangeText(PointF point)
+        {
+            foreach(Shape shape in generalState.GetSelectShapes())
+            {
+                if(shape.IsPointOnOrangeDot(point))
+                    return true;
+            }
+            return false;
+        }
+        public void ChangeText(PointF point,string text)
+        {
+            foreach (Shape shape in generalState.GetSelectShapes())
+            {
+                if (shape.IsPointOnOrangeDot(point))
+                    shape.Text = text;
+            }
+            
         }
         public void ChangeToGeneralState()
         {

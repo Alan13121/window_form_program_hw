@@ -2,14 +2,14 @@
 <CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="4.7.922.0">
   <Summary numSequencePoints="1111" visitedSequencePoints="394" numBranchPoints="243" visitedBranchPoints="115" sequenceCoverage="35.46" branchCoverage="47.33" maxCyclomaticComplexity="8" minCyclomaticComplexity="1" maxCrapScore="46.78" minCrapScore="1" visitedClasses="12" numClasses="21" visitedMethods="82" numMethods="145" />
   <Modules>
-    <Module hash="9E-9E-AE-1A-03-0C-3A-A1-1C-02-E9-C4-30-FD-56-A1-42-10-F7-AB">
+    <Module hash="79-15-2B-8C-87-FA-B8-4F-61-46-6C-F1-F8-DF-F3-5C-85-FD-CA-39">
       <Summary numSequencePoints="127" visitedSequencePoints="127" numBranchPoints="21" visitedBranchPoints="21" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="1" minCyclomaticComplexity="1" maxCrapScore="2" minCrapScore="1" visitedClasses="3" numClasses="3" visitedMethods="21" numMethods="21" />
-      <ModulePath>D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\fine-code-coverage\build-output\hw2Tests.dll</ModulePath>
-      <ModuleTime>2024-12-04T13:15:51.7958528Z</ModuleTime>
+      <ModulePath>C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\hw2Tests\bin\Debug\fine-code-coverage\build-output\hw2Tests.dll</ModulePath>
+      <ModuleTime>2024-12-16T02:41:47.1332563Z</ModuleTime>
       <ModuleName>hw2Tests</ModuleName>
       <Files>
-        <File uid="1" fullPath="D:\作業中\視窗程式設計\other thing\hw2Tests\PresentationModel\PresentationModelTests.cs" />
-        <File uid="2" fullPath="D:\作業中\視窗程式設計\other thing\hw2Tests\ModelTests.cs" />
+        <File uid="1" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\hw2Tests\PresentationModel\PresentationModelTests.cs" />
+        <File uid="2" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\hw2Tests\ModelTests.cs" />
       </Files>
       <Classes>
         <Class>
@@ -465,24 +465,24 @@
         </Class>
       </Classes>
     </Module>
-    <Module hash="88-60-F5-1A-77-9B-EE-FB-7B-CC-1E-31-D0-68-F0-81-55-CE-B3-A5">
+    <Module hash="E6-1D-97-2E-AE-FB-D0-02-F7-9E-C3-DA-A4-3D-34-0B-B4-08-CD-5C">
       <Summary numSequencePoints="984" visitedSequencePoints="267" numBranchPoints="222" visitedBranchPoints="94" sequenceCoverage="27.13" branchCoverage="42.34" maxCyclomaticComplexity="8" minCyclomaticComplexity="1" maxCrapScore="46.78" minCrapScore="1" visitedClasses="9" numClasses="18" visitedMethods="61" numMethods="124" />
-      <ModulePath>D:\作業中\視窗程式設計\other thing\hw2Tests\bin\Debug\fine-code-coverage\build-output\hw2.exe</ModulePath>
-      <ModuleTime>2024-12-04T12:53:46.8279628Z</ModuleTime>
+      <ModulePath>C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\hw2Tests\bin\Debug\fine-code-coverage\build-output\hw2.exe</ModulePath>
+      <ModuleTime>2024-12-16T02:41:46.7248152Z</ModuleTime>
       <ModuleName>hw2</ModuleName>
       <Files>
-        <File uid="7" fullPath="D:\作業中\視窗程式設計\other thing\window_form_program\DoubleBufferedPanel.cs" />
-        <File uid="8" fullPath="D:\作業中\視窗程式設計\other thing\window_form_program\DrawingState.cs" />
-        <File uid="9" fullPath="D:\作業中\視窗程式設計\other thing\window_form_program\factory.cs" />
-        <File uid="10" fullPath="D:\作業中\視窗程式設計\other thing\window_form_program\Form1.cs" />
-        <File uid="11" fullPath="D:\作業中\視窗程式設計\other thing\window_form_program\Form1.Designer.cs" />
-        <File uid="12" fullPath="D:\作業中\視窗程式設計\other thing\window_form_program\GeneralState.cs" />
-        <File uid="14" fullPath="D:\作業中\視窗程式設計\other thing\window_form_program\Model.cs" />
-        <File uid="15" fullPath="D:\作業中\視窗程式設計\other thing\window_form_program\Program.cs" />
-        <File uid="16" fullPath="D:\作業中\視窗程式設計\other thing\window_form_program\RandomStringBuilder.cs" />
-        <File uid="17" fullPath="D:\作業中\視窗程式設計\other thing\window_form_program\Shapes.cs" />
-        <File uid="24" fullPath="D:\作業中\視窗程式設計\other thing\window_form_program\PresentationModel\PresentationModel.cs" />
-        <File uid="25" fullPath="D:\作業中\視窗程式設計\other thing\window_form_program\PresentationModel\WindowsFormsGraphicsAdaptor.cs" />
+        <File uid="7" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\DoubleBufferedPanel.cs" />
+        <File uid="8" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\DrawingState.cs" />
+        <File uid="9" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\factory.cs" />
+        <File uid="10" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Form1.cs" />
+        <File uid="11" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Form1.Designer.cs" />
+        <File uid="12" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\GeneralState.cs" />
+        <File uid="14" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Model.cs" />
+        <File uid="15" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Program.cs" />
+        <File uid="16" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\RandomStringBuilder.cs" />
+        <File uid="17" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\Shapes.cs" />
+        <File uid="24" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\PresentationModel\PresentationModel.cs" />
+        <File uid="25" fullPath="C:\Users\rewqa\Desktop\視窗\git\window_form_program_hw\window_form_program\PresentationModel\WindowsFormsGraphicsAdaptor.cs" />
       </Files>
       <Classes>
         <Class>

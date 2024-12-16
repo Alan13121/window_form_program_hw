@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace hw2
 {
@@ -20,12 +21,17 @@ namespace hw2
             selectedShapes.Clear();
             isCtrlKeyDown = false;
         }
+        public List<Shape> GetSelectShapes()
+        {
+            return selectedShapes;
+        }
         public void MouseDown(Model m, PointF point)
         {
             mouseDownPosition = point;
             isMouseDown = true;
             foreach (Shape shape in Enumerable.Reverse(m.GetShapes()))
             {
+                
                 if (selectedShapes.Count > 0 && shape.IsPointOnOrangeDot(point))
                 {
                     isMovingText = true;
@@ -45,6 +51,7 @@ namespace hw2
             selectedShapes.Clear();
 
         }
+        
         public void AddSelectedShape(Shape shape)
         {
             if (!selectedShapes.Contains(shape))

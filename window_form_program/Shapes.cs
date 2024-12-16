@@ -69,10 +69,14 @@ namespace hw2
             Width = Math.Abs(Width);
             Height = Math.Abs(Height);
         }
+        public void ChangeText(string NewText)
+        {
+            this.Text = NewText;
+        }
         public abstract bool IsPointInShape(PointF point);
         public bool IsPointOnOrangeDot(PointF point)
         {
-
+            if (IsLine()) return false;
             GraphicsPath path = new GraphicsPath(FillMode.Winding);
 
             SizeF textSize = this.GetTextSize();
@@ -89,6 +93,15 @@ namespace hw2
                 return textSize;
             }
 
+        }
+        public bool IsLine()
+        {
+            return ShapeName == "Line" ? true : false;
+        }
+        public void DrawFourGrayDot(IDrawable shape)
+        {
+            if (IsLine()) return;
+            shape.DrawGrayDot(X, Y, Width, Height);
         }
 
     }
@@ -191,5 +204,19 @@ namespace hw2
             return path.IsVisible(point);
         }
     }
-
+    public class Line : Shape
+    {
+        public Line()
+        {
+            ShapeName = "Line";
+        }
+        public override void DrawShape(IDrawable shape)
+        {
+            shape.DrawLine(X, Y, Width, Height);
+        }
+        public override bool IsPointInShape(PointF point)
+        {
+            return false;
+        }
+    }
 }
