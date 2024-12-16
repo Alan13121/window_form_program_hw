@@ -85,6 +85,7 @@ namespace hw2
         }
         public SizeF GetTextSize()
         {
+            if (IsLine()) return SizeF.Empty;
             using (Bitmap bmp = new Bitmap(1, 1))
             using (Graphics g = Graphics.FromImage(bmp))
             {
@@ -103,6 +104,31 @@ namespace hw2
             if (IsLine()) return;
             shape.DrawGrayDot(X, Y, Width, Height);
         }
+        public PointF IsPointOnGaryDot(PointF point)
+        {
+            if (IsLine()) return PointF.Empty;
+            GraphicsPath path = new GraphicsPath(FillMode.Winding);
+            SizeF textSize = this.GetTextSize();
+
+            path.AddEllipse(X + Width / 2 - 5, Y - 5, 10, 10);
+            if (path.IsVisible(point))
+                return new PointF { X = X + Width / 2, Y = Y };
+
+            path.AddEllipse(X + Width / 2 - 5, Y + Height - 5, 10, 10);
+            if (path.IsVisible(point))
+                return new PointF {X = X + Width / 2,Y = Y + Height};
+
+            path.AddEllipse(X + Width - 5, Y + Height / 2 - 5, 10, 10);
+            if (path.IsVisible(point))
+                return new PointF { X = X + Width, Y = Y + Height / 2 };
+
+            path.AddEllipse(X - 5, Y + Height / 2 - 5, 10, 10);
+            if (path.IsVisible(point))
+                return new PointF { X = X , Y = Y + Height / 2 };
+
+            return PointF.Empty;
+        }
+
 
     }
 
@@ -206,6 +232,9 @@ namespace hw2
     }
     public class Line : Shape
     {
+        public int HeadShapeID { get; set; }
+        public int TailShapeID { get; set; }
+
         public Line()
         {
             ShapeName = "Line";

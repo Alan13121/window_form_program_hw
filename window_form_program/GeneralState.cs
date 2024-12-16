@@ -14,12 +14,13 @@ namespace hw2
         const int CTRL_KEY = 17;
         bool isCtrlKeyDown;
         bool isMouseDown;
-        bool isMovingText = false;
+        bool isMovingText;
         PointF mouseDownPosition = new PointF();
         public void Initialize(Model m)
         {
             selectedShapes.Clear();
             isCtrlKeyDown = false;
+            isMovingText = false;
         }
         public List<Shape> GetSelectShapes()
         {
@@ -52,11 +53,7 @@ namespace hw2
 
         }
         
-        public void AddSelectedShape(Shape shape)
-        {
-            if (!selectedShapes.Contains(shape))
-                selectedShapes.Add(shape);
-        }
+        
 
         public void MouseMove(Model m, PointF point)
         {
@@ -75,6 +72,25 @@ namespace hw2
                     shape.X += point.X - mouseDownPosition.X;
                     shape.Y += point.Y - mouseDownPosition.Y;
                     shape.OrangeDot = new PointF(shape.OrangeDot.X + (point.X - mouseDownPosition.X), shape.OrangeDot.Y + (point.Y - mouseDownPosition.Y));
+                    foreach (Shape line in m.GetShapes())
+                    {
+                        if (line.IsLine())
+                        {
+                            Line LineID = (Line)line;
+                            if (LineID.HeadShapeID == shape.ID)
+                            {
+                                line.X += point.X - mouseDownPosition.X;
+                                line.Y += point.Y - mouseDownPosition.Y;
+                                line.Width -= point.X - mouseDownPosition.X;
+                                line.Height -= point.Y - mouseDownPosition.Y;
+                            }
+                            else if (LineID.TailShapeID == shape.ID)
+                            {
+                                line.Width += point.X - mouseDownPosition.X;
+                                line.Height += point.Y - mouseDownPosition.Y;
+                            }
+                        }
+                    }
                 }
                 mouseDownPosition = point;
             }
@@ -119,6 +135,11 @@ namespace hw2
             Shape shapeToRemove = m.GetShapes().FirstOrDefault(x => x.ID == ID);
             m.remove_shape(ID);
             selectedShapes.Remove(shapeToRemove);
+        }
+        public void AddSelectedShape(Shape shape)
+        {
+            if (!selectedShapes.Contains(shape))
+                selectedShapes.Add(shape);
         }
     }
 }

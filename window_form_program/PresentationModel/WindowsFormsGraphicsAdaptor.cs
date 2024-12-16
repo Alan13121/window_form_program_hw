@@ -81,7 +81,7 @@ namespace hw2.PresentationModel
         }
         public void DrawLine(float X, float Y, float Width, float Height)
         {
-            _graphics.DrawLine(new Pen(Color.Gray, 5), X, Y,  Width,  Height);
+            _graphics.DrawLine(new Pen(Color.Gray, 5), X, Y,  X+Width, Y+ Height);
         }
         public void DrawGrayDot(float X, float Y, float Width, float Height)
         {

@@ -111,6 +111,20 @@ namespace hw2
         public void remove_shape(int ID)
         {
             shapes.remove_shape(ID);
+            List<int> removeLine = new List<int>();
+            foreach (Shape line in shapes.get_list())
+            {
+                if (line.IsLine())
+                {
+                    Line LineID = (Line)line;
+                    if (LineID.HeadShapeID == ID || LineID.TailShapeID == ID)
+                    {
+                        removeLine.Add(LineID.ID);
+                    }
+                }
+            }
+            foreach (int lineID in removeLine)
+                shapes.remove_shape(lineID);
         }
         
     }
