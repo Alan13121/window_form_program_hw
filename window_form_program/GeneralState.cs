@@ -84,7 +84,7 @@ namespace hw2
                                 line.Width -= point.X - mouseDownPosition.X;
                                 line.Height -= point.Y - mouseDownPosition.Y;
                             }
-                            else if (LineID.TailShapeID == shape.ID)
+                            if (LineID.TailShapeID == shape.ID)
                             {
                                 line.Width += point.X - mouseDownPosition.X;
                                 line.Height += point.Y - mouseDownPosition.Y;

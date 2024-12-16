@@ -208,6 +208,16 @@ namespace hw2
             Canva.Cursor = Cursors.Cross;
             model.ChangeToDrawingLineState();
         }
+
+        private void UndoButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RedoButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
