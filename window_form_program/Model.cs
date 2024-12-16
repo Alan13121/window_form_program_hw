@@ -22,13 +22,14 @@ namespace hw2
 
         DrawingState drawingState;
         GeneralState generalState;
-        DrawingLineState drawinglineState;
+        DrawingLineState drawingLineState;
         IState currentState;
 
         public Model()
         {
             generalState = new GeneralState();
             drawingState = new DrawingState();
+            drawingLineState = new DrawingLineState();
             ChangeToGeneralState();
         }
         public bool IsChangeText(PointF point)
@@ -59,6 +60,12 @@ namespace hw2
             drawingState.Initialize(this);
             currentState = drawingState;
             currentState.SetShapeType(this, Type, ID++);
+        }
+        public void ChangeToDrawingLineState()
+        {
+            drawingLineState.Initialize(this);
+            currentState = drawingLineState;
+            
         }
 
         public void Draw(IDrawable graphic)

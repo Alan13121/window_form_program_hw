@@ -81,14 +81,14 @@ namespace hw2.PresentationModel
         }
         public void DrawLine(float X, float Y, float Width, float Height)
         {
-            _graphics.DrawLine(new Pen(Color.Gray, 5), X, Y, X + Width, Y + Height);
+            _graphics.DrawLine(new Pen(Color.Gray, 5), X, Y,  Width,  Height);
         }
         public void DrawGrayDot(float X, float Y, float Width, float Height)
         {
-            _graphics.FillEllipse(Brushes.Gray, X + Width / 2, Y, 10, 10);
-            _graphics.FillEllipse(Brushes.Gray, X + Width / 2, Y + Height, 10, 10);
-            _graphics.FillEllipse(Brushes.Gray, X + Width, Y + Height / 2, 10, 10);
-            _graphics.FillEllipse(Brushes.Gray, X, Y + Height / 2, 10, 10);
+            _graphics.FillEllipse(Brushes.Gray, X + Width / 2 - 5, Y - 5, 10, 10);
+            _graphics.FillEllipse(Brushes.Gray, X + Width / 2 - 5, Y + Height - 5, 10, 10);
+            _graphics.FillEllipse(Brushes.Gray, X + Width - 5, Y + Height / 2 - 5, 10, 10);
+            _graphics.FillEllipse(Brushes.Gray, X - 5, Y + Height / 2 - 5, 10, 10);
 
         }
     }

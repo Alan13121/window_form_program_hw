@@ -50,11 +50,10 @@ namespace hw2
             {
                 ChangeTextForm changeTextForm = new ChangeTextForm();
                 changeTextForm.ShowDialog();
-                string text = changeTextForm.GetText();
-                if(changeTextForm.DialogResult==DialogResult.OK)
-                    model.ChangeText(point,text);
+                if (changeTextForm.DialogResult == DialogResult.OK)
+                    model.ChangeText(point, changeTextForm.GetText());
             }
-            
+
         }
 
         private void add_shape_buttom_Click(object sender, EventArgs e)
@@ -114,6 +113,7 @@ namespace hw2
             TerminatorToolButton.Checked = false;
             DecisionToolButton.Checked = false;
             ProcessToolButton.Checked = false;
+            LineToolButton.Checked = false;
             GeneralStateBottom.Checked = true;
         }
 
@@ -203,7 +203,11 @@ namespace hw2
             _presentationModel.CheckAllCorrect();
         }
 
-
+        private void LineToolButton_Click(object sender, EventArgs e)
+        {
+            Canva.Cursor = Cursors.Cross;
+            model.ChangeToDrawingLineState();
+        }
     }
 
 }

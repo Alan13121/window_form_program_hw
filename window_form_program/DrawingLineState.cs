@@ -9,6 +9,11 @@ namespace hw2
 {
     public class DrawingLineState : IState
     {
+        bool isPointinShape;
+        bool isPressed;
+        Line hintShape;
+        PointF ul_point, lr_point;
+        Shape GrayDot;
         public void DeleteShape(Model m, int ID)
         {
             m.remove_shape(ID);
@@ -16,50 +21,81 @@ namespace hw2
 
         public void Initialize(Model m)
         {
-            throw new NotImplementedException();
+            hintShape = new Line();
+            isPointinShape = false;
+            GrayDot = null;
+            isPressed = false;
         }
 
-        public void KeyDown(Model m, int keyValue)
-        {
-            throw new NotImplementedException();
-        }
 
-        public void KeyUp(Model m, int keyValue)
-        {
-            throw new NotImplementedException();
-        }
 
         public void MouseDown(Model m, PointF point)
         {
-            throw new NotImplementedException();
+            isPressed = true;
+            ul_point = lr_point = point;
+            hintShape.X = point.X;
+            hintShape.Y = point.Y;
+            hintShape.Width = 0;
+            hintShape.Height = 0;
+            hintShape.Text = "";
+            hintShape.ShapeName = "Line";
         }
 
         public void MouseMove(Model m, PointF point)
         {
-            
-        }
-
-        public void MouseUp(Model m, PointF point)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OnPaint(Model m, IDrawable g)
-        {
+            if (isPressed)
+            {
+                hintShape.Width = Math.Abs(point.X - ul_point.X);
+                hintShape.Height = Math.Abs(point.Y - ul_point.Y);
+                hintShape.X = Math.Min(point.X, ul_point.X);
+                hintShape.Y = Math.Min(point.Y, ul_point.Y);
+            }
             List<Shape> shapes = m.GetShapes();
             foreach (Shape shape in shapes)
             {
 
                 if (shape.IsPointInShape(point))
                 {
-                    shape.DrawFourGrayDot();
+                    this.GrayDot = shape;
                 }
+                else
+                    this.GrayDot = null;
+            }
+
+        }
+
+        public void MouseUp(Model m, PointF point)
+        {
+            isPressed = false;
+            hintShape.Normalize();
+            m.ChangeToGeneralState();
+        }
+
+        public void OnPaint(Model m, IDrawable g)
+        {
+            foreach (Shape shape in m.GetShapes())
+                shape.DrawShape(g);
+            if (GrayDot != null)
+                this.GrayDot.DrawFourGrayDot(g);
+            if (isPressed)
+            {
+                hintShape.Normalize();
+                hintShape.DrawShape(g);
             }
         }
 
         public void SetShapeType(Model m, string shapeType, int ID)
         {
-            throw new NotImplementedException();
+
+        }
+        public void KeyDown(Model m, int keyValue)
+        {
+
+        }
+
+        public void KeyUp(Model m, int keyValue)
+        {
+
         }
     }
 }
