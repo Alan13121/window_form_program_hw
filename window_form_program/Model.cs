@@ -9,12 +9,14 @@ using hw2;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using System.Drawing;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace hw2
 {
     public class Model
     {
-
+        public CommandManager commandManager = new CommandManager();
+        ShapeFactory factory = new ShapeFactory();
         Shapes shapes = new Shapes();
         public event ModelChangedEventHandler _modelChanged;
         public delegate void ModelChangedEventHandler();
@@ -97,19 +99,19 @@ namespace hw2
         {
             return shapes.get_list();
         }
-        public List<Shape> enter_new_shape(string[] new_shape)
+        public void enter_new_shape(string[] shape)
         {
-            shapes.Add_shape(new_shape[0], new_shape[1], int.Parse(new_shape[2]), int.Parse(new_shape[3]), int.Parse(new_shape[4]), int.Parse(new_shape[5]));
-            return shapes.get_list();
+            Shape new_shape = factory.CreateShape(shape[0], 0, shape[1], int.Parse(shape[2]), int.Parse(shape[3]), int.Parse(shape[4]), int.Parse(shape[5]));
+            commandManager.Execute(new DrawCommand(this, new_shape));
         }
         public List<Shape> enter_new_shape(Shape new_shape)
         {
-
             shapes.Add_shape(new_shape);
             return shapes.get_list();
         }
         public void remove_shape(int ID)
         {
+
             shapes.remove_shape(ID);
             List<int> removeLine = new List<int>();
             foreach (Shape line in shapes.get_list())
@@ -126,7 +128,31 @@ namespace hw2
             foreach (int lineID in removeLine)
                 shapes.remove_shape(lineID);
         }
-        
+        public void Undo()
+        {
+            commandManager.Undo();
+        }
+
+        public void Redo()
+        {
+            commandManager.Redo();
+        }
+        public bool IsRedoEnabled
+        {
+            get
+            {
+                return commandManager.IsRedoEnabled;
+            }
+        }
+
+        public bool IsUndoEnabled
+        {
+            get
+            {
+                return commandManager.IsUndoEnabled;
+            }
+        }
+
     }
 
 

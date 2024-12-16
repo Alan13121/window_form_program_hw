@@ -75,10 +75,13 @@ namespace hw2
                 hintShape.OrangeDot = new PointF(textX, textY);
 
                 if (hintShape.Width > 0 && hintShape.Height > 0)
-                    m.enter_new_shape(hintShape);
+                    m.commandManager.Execute(new DrawCommand(m, hintShape));
+                //m.enter_new_shape(hintShape);
                 m.ChangeToGeneralState();
                 type = -1;
             }
+            
+            
         }
         public void KeyDown(Model m, int keyValue)
         {

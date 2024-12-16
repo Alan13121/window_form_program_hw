@@ -31,6 +31,7 @@ namespace hw2
         }
         public void remove_shape(int ID)
         {
+
             Shapes_list.RemoveAll(s => s.ID == ID);
         }
         public List<Shape> get_list()

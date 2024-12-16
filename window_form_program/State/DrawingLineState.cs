@@ -87,7 +87,8 @@ namespace hw2
                     {
                         isPressed = false;
                         hintShape.TailShapeID = shape.ID;
-                        m.enter_new_shape(hintShape);
+                        m.commandManager.Execute(new DrawCommand(m, hintShape));
+                        //m.enter_new_shape(hintShape);
                         m.ChangeToGeneralState();
                         return;
                     }

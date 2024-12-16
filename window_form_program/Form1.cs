@@ -1,4 +1,4 @@
-﻿using hw2.PresentationModel;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +17,7 @@ namespace hw2
         List<Shape> shapes = new List<Shape>();
         Model model = new Model();
         Panel Canva = new DoubleBufferedPanel();
-        PresentationModel.PresentationModel _presentationModel;
+        PresentationModel _presentationModel;
         public MyDrawing_Form()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace hw2
             Canva.MouseMove += Canva_MouseMove;
             Canva.Paint += Canva_Paint;
             Canva.MouseDoubleClick += Canva_DoubleClick;
-            _presentationModel = new PresentationModel.PresentationModel(model);
+            _presentationModel = new PresentationModel(model);
             model._modelChanged += HandleModelChanged;
             Controls.Add(Canva);
             this.DoubleBuffered = true;
@@ -59,7 +59,8 @@ namespace hw2
         private void add_shape_buttom_Click(object sender, EventArgs e)
         {
             string[] new_shape = { shape_type_comboBox.Text, shape_text_textBox.Text, shape_x_textBox.Text, shape_y_textBox.Text, shape_height_textBox.Text, shape_width_textBox.Text };
-            List<Shape> shapelist = model.enter_new_shape(new_shape);
+            model.enter_new_shape(new_shape);
+            List<Shape> shapelist = model.GetShapes();
 
             shape_info_dataGridView.Rows.Clear();
             for (int i = 0; i < shapelist.Count; i++)
@@ -82,6 +83,7 @@ namespace hw2
         }
         public void HandleModelChanged()
         {
+            
             Canva.Invalidate();
         }
 
@@ -103,11 +105,12 @@ namespace hw2
         private void Canva_MouseDown(object sender, MouseEventArgs e)
         {
             model.PointerPressed(e.X, e.Y);
+            RefreshUI();
         }
         private void Canva_MouseUp(object sender, MouseEventArgs e)
         {
             model.PointerReleased(e.X, e.Y);
-
+            
             Canva.Cursor = Cursors.Default;
             StartToolButton.Checked = false;
             TerminatorToolButton.Checked = false;
@@ -115,11 +118,13 @@ namespace hw2
             ProcessToolButton.Checked = false;
             LineToolButton.Checked = false;
             GeneralStateBottom.Checked = true;
+            RefreshUI();
         }
 
         private void Canva_MouseMove(object sender, MouseEventArgs e)
         {
             model.PointerMoved(e.X, e.Y);
+            RefreshUI();
         }
 
 
@@ -211,12 +216,20 @@ namespace hw2
 
         private void UndoButton_Click(object sender, EventArgs e)
         {
-
+            model.Undo();
+            RefreshUI();
         }
 
         private void RedoButton_Click(object sender, EventArgs e)
         {
-
+            model.Redo();
+            RefreshUI();
+        }
+        void RefreshUI()    // 更新redo與undo是否為enabled
+        {
+            RedoButton.Enabled = model.IsRedoEnabled;
+            UndoButton.Enabled = model.IsUndoEnabled;
+            Canva.Invalidate();
         }
     }
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace hw2.PresentationModel
+namespace hw2
 {
     public class PresentationModel : INotifyPropertyChanged
     {
@@ -186,5 +186,6 @@ namespace hw2.PresentationModel
                 return widthTextColor;
             }
         }
+        
     }
 }

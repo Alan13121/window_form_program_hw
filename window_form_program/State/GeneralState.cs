@@ -1,4 +1,5 @@
-﻿using System;
+﻿using hw2.Command;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace hw2
         bool isMouseDown;
         bool isMovingText;
         PointF mouseDownPosition = new PointF();
+        PointF startPoint = new PointF();
+        PointF endPoint = new PointF();
         public void Initialize(Model m)
         {
             selectedShapes.Clear();
@@ -29,6 +32,7 @@ namespace hw2
         public void MouseDown(Model m, PointF point)
         {
             mouseDownPosition = point;
+
             isMouseDown = true;
             foreach (Shape shape in Enumerable.Reverse(m.GetShapes()))
             {
@@ -36,6 +40,8 @@ namespace hw2
                 if (selectedShapes.Count > 0 && shape.IsPointOnOrangeDot(point))
                 {
                     isMovingText = true;
+                    endPoint = new PointF(shape.OrangeDot.X, shape.OrangeDot.Y);
+                    startPoint = new PointF(shape.OrangeDot.X, shape.OrangeDot.Y);
                     return;
                 }
                 else if (shape.IsPointInShape(point))
@@ -43,7 +49,8 @@ namespace hw2
 
                     selectedShapes.Clear();
                     selectedShapes.Add(shape);
-
+                    endPoint = new PointF(shape.X, shape.Y);
+                    startPoint = new PointF(shape.X, shape.Y);
                     return;
                 }
 
@@ -62,6 +69,7 @@ namespace hw2
                 foreach (Shape shape in selectedShapes)
                 {
                     shape.OrangeDot = new PointF(shape.OrangeDot.X + (point.X - mouseDownPosition.X), shape.OrangeDot.Y + (point.Y - mouseDownPosition.Y));
+                    endPoint = new PointF(shape.OrangeDot.X, shape.OrangeDot.Y);
                 }
                 mouseDownPosition = point;
             }
@@ -91,6 +99,7 @@ namespace hw2
                             }
                         }
                     }
+                    endPoint = new PointF(shape.X, shape.Y);
                 }
                 mouseDownPosition = point;
             }
@@ -98,8 +107,17 @@ namespace hw2
 
         public void MouseUp(Model m, PointF point)
         {
-            if (isMouseDown)
+            if (isMovingText)
             {
+                m.commandManager.Execute(new TextMoveCommand(m, selectedShapes[0], startPoint, endPoint));
+                mouseDownPosition.X = -1;
+                mouseDownPosition.Y = -1;
+                isMouseDown = false;
+                isMovingText = false;
+            }
+            if (isMouseDown && selectedShapes.Count > 0)
+            {
+                m.commandManager.Execute(new MoveCommand(m, selectedShapes[0],startPoint,endPoint));
                 mouseDownPosition.X = -1;
                 mouseDownPosition.Y = -1;
                 isMouseDown = false;
