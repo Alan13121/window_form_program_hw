@@ -56,7 +56,7 @@ namespace hw2
 
         }
 
-        private void add_shape_buttom_Click(object sender, EventArgs e)
+        private void add_shape_buttom_Click(object sender, EventArgs e)//新增按鈕
         {
             string[] new_shape = { shape_type_comboBox.Text, shape_text_textBox.Text, shape_x_textBox.Text, shape_y_textBox.Text, shape_height_textBox.Text, shape_width_textBox.Text };
             model.enter_new_shape(new_shape);
@@ -70,12 +70,13 @@ namespace hw2
             Canva.Invalidate();
         }
 
-        private void shape_info_dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void shape_info_dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)//刪除按鈕
         {
             if (e.RowIndex >= 0 && e.ColumnIndex == 0)  // 確認點擊的行有效
             {
                 int shapeID = int.Parse(shape_info_dataGridView.Rows[e.RowIndex].Cells[1].Value.ToString());
-                model.remove_shape(shapeID);
+                model.remove_shape(shapeID);//刪除
+
                 shape_info_dataGridView.Rows.Remove(shape_info_dataGridView.Rows[e.RowIndex]);
                 Canva.Invalidate();
             }

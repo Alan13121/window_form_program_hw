@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using System.Drawing;
 using static System.Net.Mime.MediaTypeNames;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 namespace hw2
 {
@@ -48,7 +49,10 @@ namespace hw2
             foreach (Shape shape in generalState.GetSelectShapes())
             {
                 if (shape.IsPointOnOrangeDot(point))
-                    shape.Text = text;
+                {
+                    commandManager.Execute(new TextChangedCommand(this,shape,text));
+                    //shape.Text = text;
+                }
             }
             
         }
@@ -104,29 +108,42 @@ namespace hw2
             Shape new_shape = factory.CreateShape(shape[0], 0, shape[1], int.Parse(shape[2]), int.Parse(shape[3]), int.Parse(shape[4]), int.Parse(shape[5]));
             commandManager.Execute(new DrawCommand(this, new_shape));
         }
-        public List<Shape> enter_new_shape(Shape new_shape)
+        public void enter_new_shape(Shape new_shape)
         {
             shapes.Add_shape(new_shape);
-            return shapes.get_list();
         }
         public void remove_shape(int ID)
         {
-
-            shapes.remove_shape(ID);
-            List<int> removeLine = new List<int>();
-            foreach (Shape line in shapes.get_list())
+            currentState.DeleteShape(this,ID);
+            foreach (Shape removeShape in shapes.get_list())
             {
-                if (line.IsLine())
+                if (removeShape.ID == ID)
                 {
-                    Line LineID = (Line)line;
-                    if (LineID.HeadShapeID == ID || LineID.TailShapeID == ID)
+                    commandManager.Execute(new DeleteCommand(this, removeShape));
+                    break;
+                }
+
+            }
+            List<Shape> removeLines = new List<Shape>();
+            foreach (Shape shape in shapes.get_list())
+            {
+                if (shape.IsLine())
+                {
+                    Line removeLine = (Line)shape;
+                    if (removeLine.HeadShapeID == ID || removeLine.TailShapeID == ID)
                     {
-                        removeLine.Add(LineID.ID);
+                        removeLines.Add(removeLine);
                     }
                 }
             }
-            foreach (int lineID in removeLine)
-                shapes.remove_shape(lineID);
+            foreach (Shape line in removeLines)
+                commandManager.Execute(new DeleteCommand(this, line));
+                
+        }
+        public void remove_shape(Shape removeShape)
+        {
+            currentState.DeleteShape(this, 0);
+            shapes.remove_shape(removeShape);
         }
         public void Undo()
         {

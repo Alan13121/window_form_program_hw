@@ -13,10 +13,11 @@ namespace hw2
         bool isPressed;
         Line hintShape;
         PointF ul_point, lr_point;
+        PointF startPoint;
         Shape GrayDot;
         public void DeleteShape(Model m, int ID)
         {
-            m.remove_shape(ID);
+
         }
 
         public void Initialize(Model m)
@@ -25,6 +26,7 @@ namespace hw2
             isPointinShape = false;
             GrayDot = null;
             isPressed = false;
+            startPoint = PointF.Empty;
         }
 
         public void MouseDown(Model m, PointF point)
@@ -36,6 +38,7 @@ namespace hw2
                 if (currentPoint != PointF.Empty)
                 {
                     isPressed = true;
+                    startPoint = currentPoint;
                     ul_point = lr_point = point;
                     hintShape.X = point.X;
                     hintShape.Y = point.Y;
@@ -46,17 +49,17 @@ namespace hw2
                     hintShape.HeadShapeID = shape.ID;
                     return;
                 }
-                
+
             }
 
-            
+
         }
 
         public void MouseMove(Model m, PointF point)
         {
             if (isPressed)
             {
-                
+
                 hintShape.Width = point.X - ul_point.X;
                 hintShape.Height = point.Y - ul_point.Y;
             }
@@ -83,22 +86,20 @@ namespace hw2
                 foreach (Shape shape in shapes)
                 {
                     PointF currentPoint = shape.IsPointOnGaryDot(point);
-                    if (currentPoint != PointF.Empty)
+                    if (currentPoint != PointF.Empty && currentPoint != startPoint)
                     {
                         isPressed = false;
                         hintShape.TailShapeID = shape.ID;
                         m.commandManager.Execute(new DrawCommand(m, hintShape));
-                        //m.enter_new_shape(hintShape);
                         m.ChangeToGeneralState();
                         return;
                     }
 
                 }
                 isPressed = false;
-                return;
             }
 
-            
+
         }
 
         public void OnPaint(Model m, IDrawable g)

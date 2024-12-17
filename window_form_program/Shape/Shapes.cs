@@ -29,13 +29,14 @@ namespace hw2
             Shapes_list.Add(new_shape);
             ID_Count++;
         }
-        public void remove_shape(int ID)
+        public void remove_shape(Shape removeShape)
         {
-
+            int ID = removeShape.ID;
             Shapes_list.RemoveAll(s => s.ID == ID);
         }
         public List<Shape> get_list()
         {
+
             return Shapes_list;
         }
 

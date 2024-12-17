@@ -99,7 +99,7 @@ namespace hw2
         }
         public void DeleteShape(Model m, int ID)
         {
-            m.remove_shape(ID);
+            
         }
     }
 }

@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
-using hw2.PresentationModel;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
 using Moq;
@@ -19,7 +18,6 @@ namespace hw2.Tests
         private Model _model;
         private Mock<IState> _mockGeneralState;
         private Mock<IState> _mockDrawingState;
-        PresentationModel.PresentationModel _presentationModel;
         [TestMethod]
         public void TestEnterNewShape_StringArray()
         {
@@ -28,7 +26,8 @@ namespace hw2.Tests
             string[] shapeParams = { "Start", "0", "0", "0", "0", "0" };
 
             // Act
-            var shapes = model.enter_new_shape(shapeParams);
+            model.enter_new_shape(shapeParams);
+            var shapes = model.GetShapes();
 
             // Assert
             Assert.AreEqual(1, shapes.Count);
@@ -50,7 +49,8 @@ namespace hw2.Tests
             ShapeFactory factory = new ShapeFactory();
             var shape = factory.CreateShape("Start", 0, "0", 0, 0, 0, 0);
             // Act
-            var shapes = model.enter_new_shape(shape);
+            model.enter_new_shape(shape);
+            var shapes = model.GetShapes();
 
             // Assert
             Assert.AreEqual(1, shapes.Count);

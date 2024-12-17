@@ -109,7 +109,8 @@ namespace hw2
         {
             if (isMovingText)
             {
-                m.commandManager.Execute(new TextMoveCommand(m, selectedShapes[0], startPoint, endPoint));
+                if (startPoint != endPoint)
+                    m.commandManager.Execute(new TextMoveCommand(m, selectedShapes[0], startPoint, endPoint));
                 mouseDownPosition.X = -1;
                 mouseDownPosition.Y = -1;
                 isMouseDown = false;
@@ -117,7 +118,8 @@ namespace hw2
             }
             if (isMouseDown && selectedShapes.Count > 0)
             {
-                m.commandManager.Execute(new MoveCommand(m, selectedShapes[0],startPoint,endPoint));
+                if(startPoint!=endPoint)
+                    m.commandManager.Execute(new MoveCommand(m, selectedShapes[0],startPoint,endPoint));
                 mouseDownPosition.X = -1;
                 mouseDownPosition.Y = -1;
                 isMouseDown = false;
@@ -150,9 +152,9 @@ namespace hw2
         }
         public void DeleteShape(Model m, int ID)
         {
-            Shape shapeToRemove = m.GetShapes().FirstOrDefault(x => x.ID == ID);
-            m.remove_shape(ID);
-            selectedShapes.Remove(shapeToRemove);
+            if(selectedShapes.Count!=0)
+                selectedShapes.Clear();
+            
         }
         public void AddSelectedShape(Shape shape)
         {

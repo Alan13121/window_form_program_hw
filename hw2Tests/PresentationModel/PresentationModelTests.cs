@@ -1,4 +1,4 @@
-﻿using hw2.PresentationModel;
+﻿using hw2;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 using System.Security.AccessControl;
 using System.Drawing;
 
-namespace hw2.PresentationModel.Tests
+namespace hw2.Tests
 {
     [TestClass]
     public class PresentationModelTests
     {
-        private PresentationModel _presentationModel;
+        public PresentationModel _presentationModel;
 
         [TestInitialize]
         public void Initialize()
