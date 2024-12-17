@@ -48,7 +48,7 @@ namespace hw2
             PointF point = new PointF { X = e.X, Y = e.Y };
             if (_presentationModel.IsChangeText(point))
             {
-                ChangeTextForm changeTextForm = new ChangeTextForm();
+                ChangeTextForm changeTextForm = new ChangeTextForm();//呼叫文字修改方塊
                 changeTextForm.ShowDialog();
                 if (changeTextForm.DialogResult == DialogResult.OK)
                     model.ChangeText(point, changeTextForm.GetText());

@@ -11,28 +11,46 @@ namespace hw2
     {
         Shape shape;
         Model model;
-        Line line;
         PointF startPoint;
         PointF endPoint;
-        Line startLine = new Line();
-        Line endLine = new Line();
-        public LineMoveCommand(Model m, Shape shape, PointF startPoint, PointF endPoint, Line movedLine, Line startLine, Line endLine)
+        List<Line> startLine ;
+        List<Line> endLine ;
+        List<Line> movedLine;
+        Line _line;
+        public LineMoveCommand(Model m, Shape shape, PointF startPoint, PointF endPoint, List<Line> movedLine, List<Line> startLine)
         {
+            this.startLine = new List<Line>();
+            this.endLine = new List<Line>();
+            this.movedLine = new List<Line>();
+
             this.shape = shape;
-            this.line = movedLine;
-            model = m;
+            this.model = m;
             this.startPoint = startPoint;
             this.endPoint = endPoint;
 
-            this.startLine.X = startLine.X;
-            this.startLine.Y = startLine.Y;
-            this.startLine.Width = startLine.Width;
-            this.startLine.Height = startLine.Height;
+            foreach (Line line in movedLine)
+            {
+                this.movedLine.Add(line);
+            }
 
-            this.endLine.X = endLine.X;
-            this.endLine.Y = endLine.Y;
-            this.endLine.Width = endLine.Width;
-            this.endLine.Height = endLine.Height;
+            foreach (Line line in movedLine) 
+            {
+                _line = new Line();
+                _line.X = line.X;
+                _line.Y = line.Y;
+                _line.Width = line.Width;
+                _line.Height = line.Height;
+                this.endLine.Add(_line);
+            }
+            foreach (Line line in startLine)
+            {
+                _line = new Line();
+                _line.X = line.X;
+                _line.Y = line.Y;
+                _line.Width = line.Width;
+                _line.Height = line.Height;
+                this.startLine.Add(_line);
+            }
         }
 
         public void Execute()
@@ -40,23 +58,30 @@ namespace hw2
             shape.OrangeDot = new PointF(shape.OrangeDot.X + endPoint.X - shape.X, shape.OrangeDot.Y + endPoint.Y - shape.Y);
             shape.X = endPoint.X;
             shape.Y = endPoint.Y;
-            line.X = endLine.X;
-            line.Y = endLine.Y;
-            line.Width = endLine.Width;
-            line.Height = endLine.Height;
+
+            for (int i = 0; i < movedLine.Count; i++)
+            {
+                movedLine[i].X = endLine[i].X;
+                movedLine[i].Y = endLine[i].Y;
+                movedLine[i].Width = endLine[i].Width;
+                movedLine[i].Height = endLine[i].Height;
+            }
+            
         }
 
         public void UnExecute()
         {
-            line.X = startLine.X;
-            line.Y = startLine.Y;
-            line.Width = startLine.Width;
-            line.Height = startLine.Height;
+            for (int i = 0; i < movedLine.Count; i++)
+            {
+                movedLine[i].X = startLine[i].X;
+                movedLine[i].Y = startLine[i].Y;
+                movedLine[i].Width = startLine[i].Width;
+                movedLine[i].Height = startLine[i].Height;
+            }
+            
             shape.OrangeDot = new PointF(shape.OrangeDot.X + startPoint.X - shape.X, shape.OrangeDot.Y + startPoint.Y - shape.Y);
             shape.X = startPoint.X;
             shape.Y = startPoint.Y;
-
-
         }
     }
 }

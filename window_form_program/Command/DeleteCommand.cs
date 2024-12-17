@@ -8,23 +8,31 @@ namespace hw2
 {
     public class DeleteCommand : ICommand
     {
-        Shape shape;
+        List<Shape> removeShapes = new List<Shape>();
         Model model;
-        public DeleteCommand(Model m, Shape shape)
+        public DeleteCommand(Model m, List<Shape> removeShapes)
         {
-            this.shape = shape;
+            foreach (Shape shape in removeShapes)
+            {
+                this.removeShapes.Add(shape);
+            }
             model = m;
-            
         }
 
         public void Execute()
         {
-            model.remove_shape(shape);
+            foreach (Shape shape in removeShapes)
+            {
+                model.remove_shape(shape);
+            }
         }
 
         public void UnExecute()
         {
-            model.enter_new_shape(shape);
+            foreach (Shape shape in removeShapes)
+            {
+                model.enter_new_shape(shape);
+            }
         }
     }
 }

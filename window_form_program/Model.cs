@@ -51,7 +51,6 @@ namespace hw2
                 if (shape.IsPointOnOrangeDot(point))
                 {
                     commandManager.Execute(new TextChangedCommand(this, shape, text));
-                    //shape.Text = text;
                 }
             }
 
@@ -119,16 +118,18 @@ namespace hw2
         public void remove_shape(int ID)
         {
             currentState.DeleteShape(this, ID);
+            List<Shape> removeShapes = new List<Shape>();
+
             foreach (Shape removeShape in shapes.get_list())
             {
                 if (removeShape.ID == ID)
                 {
-                    commandManager.Execute(new DeleteCommand(this, removeShape));
+                    removeShapes.Add(removeShape);
                     break;
                 }
 
             }
-            List<Shape> removeLines = new List<Shape>();
+            
             foreach (Shape shape in shapes.get_list())
             {
                 if (shape.IsLine())
@@ -136,12 +137,11 @@ namespace hw2
                     Line removeLine = (Line)shape;
                     if (removeLine.HeadShapeID == ID || removeLine.TailShapeID == ID)
                     {
-                        removeLines.Add(removeLine);
+                        removeShapes.Add(removeLine);
                     }
                 }
             }
-            foreach (Shape line in removeLines)
-                commandManager.Execute(new DeleteCommand(this, line));
+            commandManager.Execute(new DeleteCommand(this, removeShapes));
 
         }
         public void remove_shape(Shape removeShape)

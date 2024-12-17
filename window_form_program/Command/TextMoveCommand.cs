@@ -17,8 +17,10 @@ namespace hw2
         {
             this.shape = shape;
             model = m;
-            this.startPoint = startPoint;
-            this.endPoint = endPoint;
+            this.startPoint = new PointF { X = startPoint.X, Y = startPoint.Y };
+            Console.WriteLine(startPoint.X.ToString());
+            Console.WriteLine(startPoint.Y.ToString());
+            this.endPoint = new PointF { X = endPoint.X, Y = endPoint.Y };
         }
 
         public void Execute()

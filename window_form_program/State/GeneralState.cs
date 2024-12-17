@@ -1,4 +1,4 @@
-﻿using hw2.Command;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -20,15 +20,20 @@ namespace hw2
         PointF mouseDownPosition = new PointF();
         PointF startPoint = new PointF();
         PointF endPoint = new PointF();
-        Line startLine = new Line();
-        Line endLine = new Line();
-        Line movedLine;
+        List<Line> startLine = new List<Line>();
+        List<Line> endLine = new List<Line>();
+        List<Line> movedLine = new List<Line>();
+        Line _line = new Line();
         public void Initialize(Model m)
         {
             selectedShapes.Clear();
             isCtrlKeyDown = false;
             isMovingText = false;
             isMovingLine = false;
+            startLine = new List<Line>();
+            endLine = new List<Line>();
+            movedLine = new List<Line>();
+            _line = new Line();
         }
         public List<Shape> GetSelectShapes()
         {
@@ -37,18 +42,19 @@ namespace hw2
         public void MouseDown(Model m, PointF point)
         {
             mouseDownPosition = point;
-
             isMouseDown = true;
             foreach (Shape shape in Enumerable.Reverse(m.GetShapes()))
             {
-                
-                if (selectedShapes.Count > 0 && shape.IsPointOnOrangeDot(point))
+
+                if (selectedShapes.Count > 0 && selectedShapes[0].IsPointOnOrangeDot(point))
                 {
+                    
                     isMovingText = true;
-                    endPoint = new PointF(shape.OrangeDot.X, shape.OrangeDot.Y);
-                    startPoint = new PointF(shape.OrangeDot.X, shape.OrangeDot.Y);
+                    endPoint = new PointF(selectedShapes[0].OrangeDot.X, selectedShapes[0].OrangeDot.Y);
+                    startPoint = new PointF(selectedShapes[0].OrangeDot.X, selectedShapes[0].OrangeDot.Y);
                     return;
                 }
+
                 else if (shape.IsPointInShape(point))
                 {
 
@@ -56,16 +62,32 @@ namespace hw2
                     selectedShapes.Add(shape);
                     endPoint = new PointF(shape.X, shape.Y);
                     startPoint = new PointF(shape.X, shape.Y);
+                    foreach (Shape line in m.GetShapes())
+                    {
+                        if (line.IsLine())
+                        {
+                            Line LineID = (Line)line;
+                            if (LineID.HeadShapeID == shape.ID || LineID.TailShapeID == shape.ID)
+                            {
+                                _line = new Line();
+                                _line.X = LineID.X;
+                                _line.Y = LineID.Y;
+                                _line.Width = LineID.Width;
+                                _line.Height = LineID.Height;
+                                startLine.Add(_line);
+                                movedLine.Add(LineID);
+                                isMovingLine = true;
+                            }
+                        }
+                    }
                     return;
                 }
-
-
             }
             selectedShapes.Clear();
 
         }
-        
-        
+
+
 
         public void MouseMove(Model m, PointF point)
         {
@@ -92,39 +114,27 @@ namespace hw2
                         if (line.IsLine())
                         {
                             Line LineID = (Line)line;
-                            if(LineID.HeadShapeID == shape.ID || LineID.TailShapeID == shape.ID)
+                            if (LineID.HeadShapeID == shape.ID || LineID.TailShapeID == shape.ID)
                             {
-                                if (!isMovingLine)
-                                {
-                                    startLine.X = LineID.X;
-                                    startLine.Y = LineID.Y;
-                                    startLine.Width = LineID.Width;
-                                    startLine.Height = LineID.Height;
-                                    movedLine = LineID;
-                                    isMovingLine = true;
-                                }
-
                                 if (LineID.HeadShapeID == shape.ID)
                                 {
                                     line.X += point.X - mouseDownPosition.X;
                                     line.Y += point.Y - mouseDownPosition.Y;
                                     line.Width -= point.X - mouseDownPosition.X;
                                     line.Height -= point.Y - mouseDownPosition.Y;
-
                                 }
-                                else 
+                                if (LineID.TailShapeID == shape.ID)
                                 {
                                     line.Width += point.X - mouseDownPosition.X;
                                     line.Height += point.Y - mouseDownPosition.Y;
                                 }
-                                endLine = LineID;
-                                break;
                             }
-                            
-                            
+
+
                         }
+
                     }
-                    
+
                 }
                 mouseDownPosition = point;
             }
@@ -145,13 +155,17 @@ namespace hw2
             {
                 if (startPoint != endPoint)
                 {
-                    m.commandManager.Execute(new LineMoveCommand(m, selectedShapes[0], startPoint, endPoint,movedLine,startLine,endLine));
+                    m.commandManager.Execute(new LineMoveCommand(m, selectedShapes[0], startPoint, endPoint, movedLine, startLine));
                 }
                 mouseDownPosition.X = -1;
                 mouseDownPosition.Y = -1;
                 isMouseDown = false;
                 isMovingText = false;
                 isMovingLine = false;
+                startLine = new List<Line>();
+                endLine = new List<Line>();
+                movedLine = new List<Line>();
+
             }
             else if (isMouseDown && selectedShapes.Count > 0)
             {
@@ -192,9 +206,9 @@ namespace hw2
         }
         public void DeleteShape(Model m, int ID)
         {
-            if(selectedShapes.Count!=0)
+            if (selectedShapes.Count != 0)
                 selectedShapes.Clear();
-            
+
         }
         public void AddSelectedShape(Shape shape)
         {
