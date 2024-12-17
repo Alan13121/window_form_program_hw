@@ -40,6 +40,7 @@ namespace hw2
                     isPressed = true;
                     startPoint = currentPoint;
                     ul_point = lr_point = point;
+                    hintShape.ID = 0;
                     hintShape.X = point.X;
                     hintShape.Y = point.Y;
                     hintShape.Width = 0;

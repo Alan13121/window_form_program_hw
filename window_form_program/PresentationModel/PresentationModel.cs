@@ -38,7 +38,7 @@ namespace hw2
         public bool IsChangeText(PointF point)
         {
             return model.IsChangeText(point);
-            
+
         }
         public void ShapeComboBoxIndexChanged(int index)
         {
@@ -186,6 +186,6 @@ namespace hw2
                 return widthTextColor;
             }
         }
-        
+
     }
 }

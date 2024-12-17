@@ -84,7 +84,7 @@ namespace hw2
         }
         public void HandleModelChanged()
         {
-            
+
             Canva.Invalidate();
         }
 
@@ -111,7 +111,7 @@ namespace hw2
         private void Canva_MouseUp(object sender, MouseEventArgs e)
         {
             model.PointerReleased(e.X, e.Y);
-            
+
             Canva.Cursor = Cursors.Default;
             StartToolButton.Checked = false;
             TerminatorToolButton.Checked = false;

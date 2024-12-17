@@ -21,7 +21,7 @@ namespace hw2
         Shapes shapes = new Shapes();
         public event ModelChangedEventHandler _modelChanged;
         public delegate void ModelChangedEventHandler();
-        int ID = 1;
+        
 
         DrawingState drawingState;
         GeneralState generalState;
@@ -37,24 +37,24 @@ namespace hw2
         }
         public bool IsChangeText(PointF point)
         {
-            foreach(Shape shape in generalState.GetSelectShapes())
+            foreach (Shape shape in generalState.GetSelectShapes())
             {
-                if(shape.IsPointOnOrangeDot(point))
+                if (shape.IsPointOnOrangeDot(point))
                     return true;
             }
             return false;
         }
-        public void ChangeText(PointF point,string text)
+        public void ChangeText(PointF point, string text)
         {
             foreach (Shape shape in generalState.GetSelectShapes())
             {
                 if (shape.IsPointOnOrangeDot(point))
                 {
-                    commandManager.Execute(new TextChangedCommand(this,shape,text));
+                    commandManager.Execute(new TextChangedCommand(this, shape, text));
                     //shape.Text = text;
                 }
             }
-            
+
         }
         public void ChangeToGeneralState()
         {
@@ -65,13 +65,13 @@ namespace hw2
         {
             drawingState.Initialize(this);
             currentState = drawingState;
-            currentState.SetShapeType(this, Type, ID++);
+            currentState.SetShapeType(this, Type, 0);
         }
         public void ChangeToDrawingLineState()
         {
             drawingLineState.Initialize(this);
             currentState = drawingLineState;
-            
+
         }
 
         public void Draw(IDrawable graphic)
@@ -112,9 +112,13 @@ namespace hw2
         {
             shapes.Add_shape(new_shape);
         }
+        public void enter_new_shape(Shape new_shape, int ID)
+        {
+            shapes.Add_shape(new_shape,ID);
+        }
         public void remove_shape(int ID)
         {
-            currentState.DeleteShape(this,ID);
+            currentState.DeleteShape(this, ID);
             foreach (Shape removeShape in shapes.get_list())
             {
                 if (removeShape.ID == ID)
@@ -138,7 +142,7 @@ namespace hw2
             }
             foreach (Shape line in removeLines)
                 commandManager.Execute(new DeleteCommand(this, line));
-                
+
         }
         public void remove_shape(Shape removeShape)
         {

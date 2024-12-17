@@ -18,16 +18,20 @@ namespace hw2
         List<Shape> Shapes_list = new List<Shape>();
         ShapeFactory fatory = new ShapeFactory();
         int ID_Count = 1;
-        public void Add_shape(string shapeType, string text, int X, int Y, int Height, int Width)
-        {
-            Shapes_list.Add(fatory.CreateShape(shapeType, ID_Count, text, X, Y, Height, Width));
-            ID_Count++;
-        }
+        
         public void Add_shape(Shape new_shape)
         {
-            new_shape.ID = ID_Count;
+            if(new_shape.ID == 0)
+            {
+                new_shape.ID = ID_Count;
+                ID_Count++;
+            }
             Shapes_list.Add(new_shape);
-            ID_Count++;
+        }
+        public void Add_shape(Shape new_shape,int ID)
+        {
+            new_shape.ID = ID;
+            Shapes_list.Add(new_shape);
         }
         public void remove_shape(Shape removeShape)
         {
@@ -118,7 +122,7 @@ namespace hw2
 
             path.AddEllipse(X + Width / 2 - 5, Y + Height - 5, 10, 10);
             if (path.IsVisible(point))
-                return new PointF {X = X + Width / 2,Y = Y + Height};
+                return new PointF { X = X + Width / 2, Y = Y + Height };
 
             path.AddEllipse(X + Width - 5, Y + Height / 2 - 5, 10, 10);
             if (path.IsVisible(point))
@@ -126,7 +130,7 @@ namespace hw2
 
             path.AddEllipse(X - 5, Y + Height / 2 - 5, 10, 10);
             if (path.IsVisible(point))
-                return new PointF { X = X , Y = Y + Height / 2 };
+                return new PointF { X = X, Y = Y + Height / 2 };
 
             return PointF.Empty;
         }

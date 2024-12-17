@@ -94,7 +94,7 @@ namespace hw2
             KindsOfShape enumType = (KindsOfShape)Enum.Parse(typeof(KindsOfShape), shapeType);
             type = (int)enumType;
             ShapeFactory factory = new ShapeFactory();
-            hintShape = factory.CreateShape(shapeType, ID, "0", 0, 0, 0, 0);
+            hintShape = factory.CreateShape(shapeType, 0, "0", 0, 0, 0, 0);
 
         }
         public void DeleteShape(Model m, int ID)

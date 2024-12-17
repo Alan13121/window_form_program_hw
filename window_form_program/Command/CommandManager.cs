@@ -15,7 +15,7 @@ namespace hw2
         {
             cmd.Execute();
             undo.Push(cmd);    // push command 進 undo stack
-            Console.WriteLine("new"+ cmd.GetType());
+            //Console.WriteLine("new"+ cmd.GetType());
             redo.Clear();      // 清除redo stack
         }
 

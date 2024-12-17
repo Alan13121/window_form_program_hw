@@ -13,10 +13,10 @@ namespace hw2
         Model model;
         Line line;
         PointF startPoint;
-        PointF endPoint ;
+        PointF endPoint;
         Line startLine = new Line();
-        Line endLine =new Line();
-        public LineMoveCommand(Model m, Shape shape, PointF startPoint, PointF endPoint, Line movedLine,Line startLine,Line endLine)
+        Line endLine = new Line();
+        public LineMoveCommand(Model m, Shape shape, PointF startPoint, PointF endPoint, Line movedLine, Line startLine, Line endLine)
         {
             this.shape = shape;
             this.line = movedLine;
@@ -55,7 +55,7 @@ namespace hw2
             shape.OrangeDot = new PointF(shape.OrangeDot.X + startPoint.X - shape.X, shape.OrangeDot.Y + startPoint.Y - shape.Y);
             shape.X = startPoint.X;
             shape.Y = startPoint.Y;
-            
+
 
         }
     }
