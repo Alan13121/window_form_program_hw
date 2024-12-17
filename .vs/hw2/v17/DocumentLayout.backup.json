@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|c:\\users\\rewqa\\desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\command\\linemovecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|solutionrelative:window_form_program\\command\\linemovecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|c:\\users\\rewqa\\desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\state\\generalstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|solutionrelative:window_form_program\\state\\generalstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|c:\\users\\rewqa\\desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\shape\\shapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|solutionrelative:window_form_program\\shape\\shapes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|solutionrelative:window_form_program\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\presentationmodel\\presentationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|c:\\users\\rewqa\\desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\presentationmodel\\presentationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|solutionrelative:window_form_program\\presentationmodel\\presentationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|solutionrelative:window_form_program\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1F70CB5-C0F9-4925-B6A9-18082D7B0BA6}|window_form_program\\hw2.csproj|C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -30,33 +46,84 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Shapes.cs",
+              "DocumentMoniker": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\Shape\\Shapes.cs",
+              "RelativeDocumentMoniker": "window_form_program\\Shape\\Shapes.cs",
+              "ToolTip": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\Shape\\Shapes.cs",
+              "RelativeToolTip": "window_form_program\\Shape\\Shapes.cs",
+              "ViewState": "AgIAAOsAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T06:34:10.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LineMoveCommand.cs",
+              "DocumentMoniker": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\Command\\LineMoveCommand.cs",
+              "RelativeDocumentMoniker": "window_form_program\\Command\\LineMoveCommand.cs",
+              "ToolTip": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\Command\\LineMoveCommand.cs*",
+              "RelativeToolTip": "window_form_program\\Command\\LineMoveCommand.cs*",
+              "ViewState": "AgIAACMAAAAAAAAAAAAYwB0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T05:54:13.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "GeneralState.cs",
+              "DocumentMoniker": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\State\\GeneralState.cs",
+              "RelativeDocumentMoniker": "window_form_program\\State\\GeneralState.cs",
+              "ToolTip": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\State\\GeneralState.cs*",
+              "RelativeToolTip": "window_form_program\\State\\GeneralState.cs*",
+              "ViewState": "AgIAAIQAAAAAAAAAAAA7wJMAAAB1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T05:51:53.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Model.cs",
+              "DocumentMoniker": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\Model.cs",
+              "RelativeDocumentMoniker": "window_form_program\\Model.cs",
+              "ToolTip": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\Model.cs",
+              "RelativeToolTip": "window_form_program\\Model.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAvwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T05:36:40.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "PresentationModel.cs",
               "DocumentMoniker": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\PresentationModel\\PresentationModel.cs",
               "RelativeDocumentMoniker": "window_form_program\\PresentationModel\\PresentationModel.cs",
               "ToolTip": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\PresentationModel\\PresentationModel.cs",
               "RelativeToolTip": "window_form_program\\PresentationModel\\PresentationModel.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAjwCcAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAADwvzoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T15:18:52.15Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\Form1.cs",
               "RelativeDocumentMoniker": "window_form_program\\Form1.cs",
               "ToolTip": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\Form1.cs",
               "RelativeToolTip": "window_form_program\\Form1.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAQwDAAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAANcAAAAAAAAAAAAswDEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T02:45:51.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Form1.cs [\u8A2D\u8A08]",
               "DocumentMoniker": "C:\\Users\\rewqa\\Desktop\\\u8996\u7A97\\git\\window_form_program_hw\\window_form_program\\Form1.cs",
               "RelativeDocumentMoniker": "window_form_program\\Form1.cs",

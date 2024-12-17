@@ -65,6 +65,7 @@
     <Compile Include="ChangeTextForm.Designer.cs">
       <DependentUpon>ChangeTextForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Command\LineMoveCommand.cs" />
     <Compile Include="Command\TextChangedCommand.cs" />
     <Compile Include="Command\CommandManager.cs" />
     <Compile Include="Command\DeleteCommand.cs" />
