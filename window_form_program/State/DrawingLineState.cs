@@ -99,7 +99,7 @@ namespace hw2
                 }
                 isPressed = false;
             }
-
+            m.ChangeToGeneralState();
 
         }
 
