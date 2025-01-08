@@ -66,6 +66,8 @@
             this.GeneralStateBottom = new System.Windows.Forms.ToolStripButton();
             this.UndoButton = new System.Windows.Forms.ToolStripButton();
             this.RedoButton = new System.Windows.Forms.ToolStripButton();
+            this.SaveButton = new System.Windows.Forms.ToolStripButton();
+            this.LoadButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.shape_info_dataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -89,7 +91,7 @@
             this.height_Column,
             this.width_Column});
             this.shape_info_dataGridView.Location = new System.Drawing.Point(5, 57);
-            this.shape_info_dataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.shape_info_dataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.shape_info_dataGridView.Name = "shape_info_dataGridView";
             this.shape_info_dataGridView.ReadOnly = true;
             this.shape_info_dataGridView.RowHeadersVisible = false;
@@ -388,7 +390,9 @@
             this.LineToolButton,
             this.GeneralStateBottom,
             this.UndoButton,
-            this.RedoButton});
+            this.RedoButton,
+            this.SaveButton,
+            this.LoadButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1016, 27);
@@ -403,7 +407,7 @@
             this.StartToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.StartToolButton.Name = "StartToolButton";
             this.StartToolButton.Size = new System.Drawing.Size(24, 24);
-            this.StartToolButton.Text = "toolStripButton1";
+            this.StartToolButton.Text = "start";
             this.StartToolButton.Click += new System.EventHandler(this.StartToolButton_Click);
             // 
             // TerminatorToolButton
@@ -413,7 +417,7 @@
             this.TerminatorToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TerminatorToolButton.Name = "TerminatorToolButton";
             this.TerminatorToolButton.Size = new System.Drawing.Size(24, 24);
-            this.TerminatorToolButton.Text = "toolStripButton2";
+            this.TerminatorToolButton.Text = "Terminator";
             this.TerminatorToolButton.Click += new System.EventHandler(this.TerminatorToolButton_Click);
             // 
             // ProcessToolButton
@@ -423,7 +427,7 @@
             this.ProcessToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ProcessToolButton.Name = "ProcessToolButton";
             this.ProcessToolButton.Size = new System.Drawing.Size(24, 24);
-            this.ProcessToolButton.Text = "toolStripButton3";
+            this.ProcessToolButton.Text = "Process";
             this.ProcessToolButton.Click += new System.EventHandler(this.ProcessToolButton_Click);
             // 
             // DecisionToolButton
@@ -433,7 +437,7 @@
             this.DecisionToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.DecisionToolButton.Name = "DecisionToolButton";
             this.DecisionToolButton.Size = new System.Drawing.Size(24, 24);
-            this.DecisionToolButton.Text = "toolStripButton4";
+            this.DecisionToolButton.Text = "Decision";
             this.DecisionToolButton.Click += new System.EventHandler(this.DecisionToolButton_Click);
             // 
             // LineToolButton
@@ -443,7 +447,7 @@
             this.LineToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.LineToolButton.Name = "LineToolButton";
             this.LineToolButton.Size = new System.Drawing.Size(24, 24);
-            this.LineToolButton.Text = "toolStripButton1";
+            this.LineToolButton.Text = "Line";
             this.LineToolButton.Click += new System.EventHandler(this.LineToolButton_Click);
             // 
             // GeneralStateBottom
@@ -453,7 +457,7 @@
             this.GeneralStateBottom.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.GeneralStateBottom.Name = "GeneralStateBottom";
             this.GeneralStateBottom.Size = new System.Drawing.Size(24, 24);
-            this.GeneralStateBottom.Text = "toolStripButton1";
+            this.GeneralStateBottom.Text = "GeneralState";
             this.GeneralStateBottom.Click += new System.EventHandler(this.GeneralStateBottom_Click);
             // 
             // UndoButton
@@ -463,7 +467,7 @@
             this.UndoButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.UndoButton.Name = "UndoButton";
             this.UndoButton.Size = new System.Drawing.Size(24, 24);
-            this.UndoButton.Text = "toolStripButton1";
+            this.UndoButton.Text = "Undo";
             this.UndoButton.Click += new System.EventHandler(this.UndoButton_Click);
             // 
             // RedoButton
@@ -473,8 +477,28 @@
             this.RedoButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RedoButton.Name = "RedoButton";
             this.RedoButton.Size = new System.Drawing.Size(24, 24);
-            this.RedoButton.Text = "toolStripButton2";
+            this.RedoButton.Text = "Redo";
             this.RedoButton.Click += new System.EventHandler(this.RedoButton_Click);
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.SaveButton.Image = ((System.Drawing.Image)(resources.GetObject("SaveButton.Image")));
+            this.SaveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(24, 24);
+            this.SaveButton.Text = "Save";
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // LoadButton
+            // 
+            this.LoadButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.LoadButton.Image = ((System.Drawing.Image)(resources.GetObject("LoadButton.Image")));
+            this.LoadButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LoadButton.Name = "LoadButton";
+            this.LoadButton.Size = new System.Drawing.Size(24, 24);
+            this.LoadButton.Text = "Load";
+            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
             // 
             // MyDrawing_Form
             // 
@@ -487,7 +511,7 @@
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MyDrawing_Form";
             this.Text = "MyDrawing";
             ((System.ComponentModel.ISupportInitialize)(this.shape_info_dataGridView)).EndInit();
@@ -542,6 +566,8 @@
         private System.Windows.Forms.ToolStripButton LineToolButton;
         private System.Windows.Forms.ToolStripButton UndoButton;
         private System.Windows.Forms.ToolStripButton RedoButton;
+        private System.Windows.Forms.ToolStripButton SaveButton;
+        private System.Windows.Forms.ToolStripButton LoadButton;
     }
 }
 

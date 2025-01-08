@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -231,6 +232,44 @@ namespace hw2
             RedoButton.Enabled = model.IsRedoEnabled;
             UndoButton.Enabled = model.IsUndoEnabled;
             Canva.Invalidate();
+        }
+
+        private async void SaveButton_Click(object sender, EventArgs e)
+        {
+            SaveButton.Enabled = false;
+            try
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "text (*.txt)|*.txt";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    await model.SaveAsync(saveFileDialog.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("儲存檔案失敗: " + ex.Message);
+            }
+            SaveButton.Enabled = true;
+        }
+
+        private async void LoadButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "text (*.txt)|*.txt";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    await model.Load(openFileDialog.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("讀取檔案失敗: " + ex.Message);
+            }
+            
+            RefreshUI();
         }
     }
 

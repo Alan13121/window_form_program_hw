@@ -30,6 +30,9 @@ namespace hw2
                 case "Decision":
                     shape = new Decision();
                     break;
+                case "Line":
+                    shape = new Line();
+                    break;
                 default:
                     throw new ArgumentException("Invalid shape type");
             }

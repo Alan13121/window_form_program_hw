@@ -11,6 +11,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using System.Drawing;
 using static System.Net.Mime.MediaTypeNames;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.IO;
+using System.IO.Ports;
+using Newtonsoft.Json;
 
 namespace hw2
 {
@@ -21,7 +24,7 @@ namespace hw2
         Shapes shapes = new Shapes();
         public event ModelChangedEventHandler _modelChanged;
         public delegate void ModelChangedEventHandler();
-        
+
 
         DrawingState drawingState;
         GeneralState generalState;
@@ -113,7 +116,7 @@ namespace hw2
         }
         public void enter_new_shape(Shape new_shape, int ID)
         {
-            shapes.Add_shape(new_shape,ID);
+            shapes.Add_shape(new_shape, ID);
         }
         public void remove_shape(int ID)
         {
@@ -129,7 +132,7 @@ namespace hw2
                 }
 
             }
-            
+
             foreach (Shape shape in shapes.get_list())
             {
                 if (shape.IsLine())
@@ -174,16 +177,79 @@ namespace hw2
             }
         }
 
+        public async Task Load(string filePath)
+        {
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                currentState.DeleteShape(this, 0);
+                shapes.remove_All();
+
+                string line;
+
+                while ((line = reader.ReadLine()) != null)
+                {
+                    var parts = line.Split(',');
+                    if (parts.Length == 7)
+                    {
+                        int ID = int.Parse(parts[1]);
+                        Shape loadShape = factory.CreateShape(parts[0], ID, parts[2], int.Parse(parts[3]), int.Parse(parts[4]), int.Parse(parts[5]), int.Parse(parts[6]));
+                        enter_new_shape(loadShape, ID);
+                        await Task.Delay(100);
+                        NotifyModelChanged();
+
+                    }
+                    else if (parts.Length == 9)
+                    {
+                        int ID = int.Parse(parts[1]);
+                        Shape loadShape = factory.CreateShape(parts[0], ID, parts[2], int.Parse(parts[3]), int.Parse(parts[4]), int.Parse(parts[5]), int.Parse(parts[6]));
+                        Line loadLine = (Line)loadShape;
+                        loadLine.HeadShapeID = int.Parse(parts[7]);
+                        loadLine.TailShapeID = int.Parse(parts[8]);
+                        enter_new_shape(loadLine, ID);
+                        await Task.Delay(100);
+                        NotifyModelChanged();
+
+                    }
+                }
+            }
+            NotifyModelChanged();
+        }
+        public async Task SaveAsync(string filePath)
+        {
+            var saveShapes = new List<Shape>();
+            foreach (var shape in shapes.get_list())
+            {
+                saveShapes.Add(shape);
+            }
+            await Task.Delay(3000);
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                foreach (var shape in saveShapes)
+                {
+                    if (shape.IsLine())
+                    {
+                        Line saveLine = (Line)shape;
+                        writer.WriteLine($"{saveLine.ShapeName},{saveLine.ID},{saveLine.Text},{saveLine.X},{saveLine.Y},{saveLine.Height},{saveLine.Width},{saveLine.HeadShapeID},{saveLine.TailShapeID}");
+
+                    }
+                    else
+                        writer.WriteLine($"{shape.ShapeName},{shape.ID},{shape.Text},{shape.X},{shape.Y},{shape.Height},{shape.Width}");
+                }
+            }
+        }
+
+
     }
 
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
 
